@@ -11,9 +11,11 @@ on:
 jobs:
   autosend:
     runs-on: ubuntu-latest
-
+    name: notify
+    
     steps:
-      - uses: actions/checkout@v4.1.6
+      - name: Checkout
+        uses: actions/checkout@v4.1.6
       - name: do notification as bot
         uses: nhomble/groupme-notify-action@v1.2
         id: bot
