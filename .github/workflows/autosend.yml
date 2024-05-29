@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4.1.6
       - name: do notification as bot
         uses: nhomble/groupme-notify-action@v1.2
         id: bot
