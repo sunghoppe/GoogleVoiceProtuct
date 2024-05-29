@@ -24,7 +24,7 @@ jobs:
         id: bot
         with:
           bot: ${{ secrets.GM_BOT_ID }}
-          message: "Never say die!"
+          message: "Never say die! keepGV forever!"
           token: ${{ secrets.GM_API_KEY }}
 
       - name: Delete workflow runs
