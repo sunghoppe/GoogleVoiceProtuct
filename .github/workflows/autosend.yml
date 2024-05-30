@@ -8,6 +8,9 @@ on:
   workflow_dispatch:
     inputs:
 
+env:
+  TZ: Asia/Shanghai
+
 jobs:
   autosend:
     runs-on: ubuntu-latest
