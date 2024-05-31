@@ -33,9 +33,10 @@ jobs:
         if: always()
         run: |
           current_time=$(date +"%Y-%m-%d %H:%M:%S")
+          message="GV保号脚本运行完毕！\n当前时间：$current_time\n脚本运行结果: ${{ job.status }}"
           curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
             -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
-            -d text="当前时间：$current_time \n GV保号脚本运行完毕！\n脚本运行结果: ${{ job.status }}"
+            -d text="$message"
 
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@main
