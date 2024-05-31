@@ -34,7 +34,7 @@ jobs:
         run: |
           curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
             -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} \
-            -d text="Build finished with status: ${{ job.status }}"
+            -d text="GV保号脚本运行完毕！当前时间：$current_time，脚本运行结果: ${{ job.status }}"
 
       - name: Delete workflow runs
         uses: Mattraks/delete-workflow-runs@main
